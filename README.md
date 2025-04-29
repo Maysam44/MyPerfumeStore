@@ -36,6 +36,6 @@ It provides a rich multimedia shopping experience with dynamic product listings,
 
 ✍️ Author
 Developed by MaysamHammad
-GitHub: https://github.com/Maysam44/PerfumeStore.git
+GitHub: (https://github.com/Maysam44/MyPerfumeStore.git)
 
 

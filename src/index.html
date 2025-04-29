@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Explore the best luxury perfumes at Perfume Store. Special offers on premium fragrances for men and women.">
+    <meta name="keywords" content="perfume, luxury, fragrances, premium, store, offers">
+    <meta name="author" content="Perfume Store">
+    <meta property="og:title" content="Perfume Store - Luxury Fragrances">
+    <meta property="og:description" content="Discover our exclusive collection of perfumes with special discounts.">
+    <meta property="og:image" content="images/PerfumeLogo.jpg">
+    <meta property="og:url" content="https://www.perfume-store.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <title>Perfume Store</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Georgia', serif;
+            color: #4F4F4F;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Header Styling */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #fff9f2;
+            border-bottom: 3px solid #dd9f53;
+        }
+
+        header img {
+            height: 60px;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            padding: 0;
+            margin: 0;
+
+        }
+
+        header nav ul li {
+            display: inline;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: #4F4F4F;
+            font-weight: bold;
+        }
+
+
+        header nav ul li a:hover {
+            background-color: #f3c590;
+
+        }
+
+        /* Featured Section Styling */
+        .featured {
+            background-color: #fff9f2;
+            padding: 20px;
+        }
+
+        .featured .swiper {
+            width: 100%;
+        }
+
+        .featured .swiper-wrapper {
+            display: flex;
+        }
+
+        .featured .swiper-slide {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .featured .perfume {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+            max-width: 250px;
+        }
+
+        .featured .perfume img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .featured .perfume:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .featured .perfume p {
+            margin: 10px 0;
+        }
+
+        .featured .perfume p.name {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .featured .perfume p.price {
+            color: #dd9f53;
+            font-size: 14px;
+        }
+
+        .featured .perfume button {
+            background-color: #dd9f53;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .featured .perfume button:hover {
+            background-color: #9f5e0e;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: #5c3403;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            font-size: 24px;
+        }
+
+        .swiper-button-next:hover,
+        .swiper-button-prev:hover {
+            color: #9f5e0e;
+        }
+
+
+
+        /* Footer Styling */
+        footer {
+            background-color: #fffaf4;
+            padding: 10px 20px;
+            text-align: center;
+            border-top: 2px solid #dd9f53;
+        }
+
+        footer p {
+            margin: 0;
+            color: #4F4F4F;
+        }
+
+        footer a {
+            color: #dd9f53;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        footer .social-icons {
+            margin-top: 10px;
+        }
+
+        footer .social-icons img {
+            width: 20px;
+            height: 20px;
+            margin: 0 5px;
+        }
+
+        /* Video Section Styling */
+        .hero-video {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .hero-video .background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .hero-video .hero-content {
+            z-index: 1;
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        .hero-video .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-video .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .play-pause-button {
+            background-color: white;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 2px solid #dd9f53;
+            cursor: pointer;
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 30px;
+            color: #dd9f53;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .play-pause-button::before {
+            content: "\25B6";
+            position: absolute;
+        }
+
+        .paused::before {
+            content: "\23F8";
+        }
+
+        .play-pause-button:focus {
+            outline: none;
+        }
+
+        .play-pause-button:hover {
+            background-color: #e0e0e0;
+        }
+
+        .ShowMore {
+            background-color: #dd9f53;
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .ShowMore:hover {
+            background-color: #9f5e0e;
+        }
+
+        @media only screen and (max-width: 768px) {
+            header nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .featured .swiper-slide {
+                max-width: 150px;
+            }
+
+            .hero-video h1 {
+                font-size: 2rem;
+            }
+
+            .hero-video p {
+                font-size: 1rem;
+            }
+
+            .swiper-wrapper {
+                flex-wrap: nowrap;
+            }
+
+            footer .social-icons img {
+                width: 15px;
+                height: 15px;
+            }
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 70px;
+        }
+
+        .social-icons i {
+            font-size: 40px;
+            color: #333;
+            transition: color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .social-icons i:hover {
+            color: #dd9f53;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <a href="index.html"><img src="images/PerfumeLogo.jpg" alt="Perfume Store Logo"></a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- Main Content -->
+    <main>
+        <!-- Video and audio Section -->
+        <section class="hero-video">
+            <video id="backgroundVideo" class="background-video" loop>
+                <source src="video/Perfume2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="hero-content">
+                <h1>Discover the Essence of Luxury</h1>
+                <p>Explore our exclusive collection of exquisite perfumes.</p>
+                <button id="playButton" class="play-pause-button" aria-label="Play Video"></button>
+            </div>
+            <audio autoplay loop>
+                <source src="audio\Chanel Coco Mademoiselle Perfume B-Roll.mp3" type="audio/mp3">
+                Your browser does not support the audio tag.
+            </audio>
+            <a href="products.html"><button class="ShowMore">Shop Now</button></a>
+        </section>
+
+        <!-- Featured Section -->
+        <section class="featured">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide perfume">
+                        <img src="images/Perfume11.jpg" alt="Perfume 1">
+                        <p class="name">BONPOINT</p>
+                        <p class="price">$100.00</p>
+                        <a href="products.html"><button>Show more</button></a>
+                    </div>
+                    <div class="swiper-slide perfume">
+                        <img src="images/Perfume7.jpg" alt="Perfume 1">
+                        <p class="name">KHAMRAH</p>
+                        <p class="price">$170.00</p>
+                        <a href="products.html"><button>Show more</button></a>
+                    </div>
+                    <div class="swiper-slide perfume">
+                        <img src="images/Perfume9.jpg" alt="Perfume 1">
+                        <p class="name">SI</p>
+                        <p class="price">$60.00</p>
+                        <a href="products.html"><button>Show more</button></a>
+                    </div>
+                    <div class="swiper-slide perfume">
+                        <img src="images/Perfume16.jpg" alt="Perfume 1">
+                        <p class="name">VERSACE</p>
+                        <p class="price">$85.00</p>
+                        <a href="products.html"><button>Show more</button></a>
+                    </div>
+                    <div class="swiper-slide perfume">
+                        <img src="images/Perfume1.jpg" alt="Perfume 4">
+                        <p class="name">Jo MALONE</p>
+                        <p class="price">$89.95</p>
+                        <a href="products.html"><button>Show more</button></a>
+                    </div>
+                    <div class="swiper-slide perfume">
+                        <img src="images/Perfume8.jpg" alt="Perfume 1">
+                        <p class="name">MUSAMAM</p>
+                        <p class="price">$75.00</p>
+                        <a href="products.html"><button>Show more</button></a>
+                    </div>
+                    <div class="swiper-slide perfume">
+                        <img src="images/Perfume4.jpg" alt="Perfume 1">
+                        <p class="name">BOIS IMPERIAL</p>
+                        <p class="price">$85.00</p>
+                        <a href="products.html"><button>Show more</button></a>
+                    </div>
+                    <div class="swiper-slide perfume">
+                        <img src="images/Perfume14.jpg" alt="Perfume 1">
+                        <p class="name">OLYMPEA</p>
+                        <p class="price">$55.00</p>
+                        <a href="products.html"><button>Show more</button></a>
+                    </div>
+                    <div class="swiper-slide perfume">
+                        <img src="images/Perfume3.jpg" alt="Perfume 3">
+                        <p class="name">Elegant Rose</p>
+                        <p class="price">$60.00</p>
+                        <a href="products.html"><button>Show more</button></a>
+                    </div>
+                    <div class="swiper-slide perfume">
+                        <img src="images/Perfume22.jpg" alt="Perfume 1">
+                        <p class="name">VIRGNs FIRST</p>
+                        <p class="price">$80.00</p>
+                        <a href="products.html"><button>Show more</button></a>
+                    </div>
+                    <div class="swiper-slide perfume">
+                        <img src="images/Perfume6.jpg" alt="Perfume 5">
+                        <p class="name">Daisy</p>
+                        <p class="price">$55.00</p>
+                        <a href="products.html"><button>Show more</button></a>
+                    </div>
+                    <div class="swiper-slide perfume">
+                        <img src="images/Perfume12.jpg" alt="Perfume 1">
+                        <p class="name">AERIN</p>
+                        <p class="price">$70.00</p>
+                        <a href="products.html"><button>Show more</button></a>
+                    </div>
+                    <div class="swiper-slide perfume">
+                        <img src="images/Perfume10.jpg" alt="Perfume 1">
+                        <p class="name">UN JARDIN</p>
+                        <p class="price">$85.00</p>
+                        <a href="products.html"><button>Show more</button></a>
+                    </div>
+                    <div class="swiper-slide perfume">
+                        <img src="images/Perfume2.jpg" alt="Perfume 2">
+                        <p class="name">BACCARAT ROUGE 540</p>
+                        <p class="price">$370.00</p>
+                        <a href="products.html"><button>Show more</button></a>
+                    </div>
+                    <div class="swiper-slide perfume">
+                        <img src="images/Perfume15.jpg" alt="Perfume 1">
+                        <p class="name">YOU</p>
+                        <p class="price">$150.00</p>
+                        <a href="products.html"><button>Show more</button></a>
+                    </div>
+                </div>
+                <!-- Add navigation arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Perfume Store.<br>
+            All Rights Reserved.<br></p>
+        <div class="social-icons">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+        </div>
+    </footer>
+
+    <!-- JavaScript code -->
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const video = document.getElementById("backgroundVideo");
+            const audio = document.getElementById("backgroundAudio");
+            video.muted = false;
+            audio.play();
+        });
+        document.getElementById("playButton").addEventListener("click", function () {
+            const video = document.getElementById("backgroundVideo");
+            video.play();
+            video.muted = false;
+            this.style.display = "none";
+        });
+        const swiper = new Swiper('.swiper', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 5,
+                }
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            loop: true,
+            autoplay: false,
+        });
+
+        let slideInterval;
+
+        const startAutoSlide = (direction) => {
+            slideInterval = setInterval(() => {
+                if (direction === 'next') {
+                    swiper.slideNext();
+                } else {
+                    swiper.slidePrev();
+                }
+            }, 300);
+        };
+
+        const stopAutoSlide = () => {
+            clearInterval(slideInterval);
+        };
+
+        const nextButton = document.querySelector('.swiper-button-next');
+        nextButton.addEventListener('mouseenter', () => startAutoSlide('next'));
+        nextButton.addEventListener('mouseleave', stopAutoSlide);
+
+        const prevButton = document.querySelector('.swiper-button-prev');
+        prevButton.addEventListener('mouseenter', () => startAutoSlide('prev'));
+        prevButton.addEventListener('mouseleave', stopAutoSlide);
+
+    </script>
+
+</body>
+
+</html>

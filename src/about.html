@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <title>Perfume Store </title>
+
+    <!-- CSS code -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Georgia', serif;
+            color: #4F4F4F;
+            background: linear-gradient(to bottom, #fffaf4, #f8ede3);
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #fffaf4;
+            padding: 10px 20px;
+            border-bottom: 2px solid #dd9f53;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header img {
+            height: 60px;
+        }
+
+        header h1 {
+            color: #dd9f53;
+            font-size: 24px;
+            margin: 0;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+            margin: 0;
+            padding: 0;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: #4F4F4F;
+            font-weight: bold;
+        }
+
+        header nav ul li a:hover {
+            color: #dd9f53;
+        }
+
+        /* main Styling */
+        main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .content-box {
+            background-color: #fffaf4;
+            border-radius: 15px;
+            padding: 30px;
+            max-width: 700px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: left;
+        }
+
+        .content-box h2 {
+            color: #dd9f53;
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .content-box p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #4F4F4F;
+            margin-bottom: 20px;
+        }
+
+        .content-box p.vision,
+        .content-box p.mission {
+            font-style: italic;
+            color: #dd9f53;
+            margin-bottom: 10px;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #fffaf4;
+            padding: 10px 20px;
+            text-align: center;
+            border-top: 2px solid #dd9f53;
+        }
+
+        footer p {
+            margin: 0;
+            color: #4F4F4F;
+        }
+
+        footer a {
+            color: #9c958d;
+            text-decoration: none;
+            font-size: 30px;
+            color: #333;
+            transition: color 0.3s ease;
+            cursor: pointer;
+        }
+
+        footer a:hover {
+            color: #dd9f53;
+        }
+
+
+        /* Responsive Styling */
+        @media only screen and (max-width: 768px) {
+            header nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .featured .swiper-slide {
+                max-width: 150px;
+            }
+
+            .hero-video h1 {
+                font-size: 2rem;
+            }
+
+            .hero-video p {
+                font-size: 1rem;
+            }
+
+            .swiper-wrapper {
+                flex-wrap: nowrap;
+            }
+
+            footer .social-icons img {
+                width: 15px;
+                height: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <a href="index.html"><img src="images/PerfumeLogo.jpg" alt="Perfume Store Logo"></a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- content-box Section -->
+    <main>
+        <div class="content-box">
+            <h2>About Us</h2>
+            <p>Welcome to <strong>Perfume</strong>, where elegance meets fragrance. Since 2020, we have been
+                dedicated to bringing the finest scents to women who seek sophistication and beauty in every drop.</p>
+            <p>Each perfume in our collection is crafted with care, using only the finest ingredients to ensure a
+                long-lasting and captivating impression, designed to complement your elegance.</p>
+            <p><strong>Our Vision:</strong> To be the leading name in luxury perfumes
+                for people who value sophistication and individuality.</p>
+            <p><strong>Our Mission:</strong> To provide unique and memorable fragrances that enhance
+                your beauty and elevate your style.</p>
+            <p>Explore our carefully curated collection and let us help you discover the scent that defines your unique
+                elegance.</p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Perfume Store.
+            <br> All Rights Reserved.
+        </p>
+        <div class="social-icons">
+            <a href="#" class="fab fa-facebook"></a>
+            <a href="#" class="fab fa-instagram"></a>
+        </div>
+    </footer>
+</body>
+
+</html>

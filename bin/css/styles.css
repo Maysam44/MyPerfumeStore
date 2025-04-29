@@ -1,0 +1,62 @@
+/* Basic styling for all pages */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.featured .perfume-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 أعمدة متساوية العرض */
+    gap: 20px;
+    /* مسافة بين العناصر */
+    justify-items: center;
+    /* توسيط العناصر أفقياً */
+}
+
+.featured .perfume {
+    text-align: center;
+    width: 200px;
+    /* عرض لكل عطر */
+}
+
+.featured .perfume img {
+    width: 100%;
+    /* ملء الصورة بعرض العنصر */
+    height: auto;
+    border-radius: 10px;
+}
+
+
+header,
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+header ul {
+    list-style: none;
+    padding: 0;
+}
+
+header ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+footer a {
+    color: #ccc;
+    text-decoration: none;
+}

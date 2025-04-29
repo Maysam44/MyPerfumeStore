@@ -1,0 +1,198 @@
+[
+    {
+        "id": 1,
+        "name": "Jo MALONE",
+        "description": "A collection of elegant and refined fragrances that blend exquisite ingredients like citrus, florals, and spices, creating versatile and timeless scents",
+        "price": 89.00,
+        "image": "images/Perfume1.jpg"
+    },
+    {
+        "id": 2,
+        "name": "BACCARAT ROUGE 540",
+        "description": "A luxurious and captivating fragrance that combines floral, amber, and woody notes, creating a rich, radiant scent with a unique, intoxicating allure",
+        "price": 370.00,
+        "image": "images/Perfume2.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Floral Breeze",
+        "description": "A fresh and airy fragrance that blends light floral notes with a hint of citrus, creating a crisp and uplifting scent perfect for everyday wear",
+        "price": 55.00,
+        "image": "images/Perfume3.jpg"
+    },
+    {
+        "id": 4,
+        "name": "BOIS IMPERIAL",
+        "description": "A refined and sophisticated fragrance that combines rich woody notes with hints of citrus and spices, creating a bold, elegant scent with lasting depth",
+        "price": 80.00,
+        "image": "images/Perfume4.jpg"
+    },
+    {
+        "id": 5,
+        "name": "BOTTEGA",
+        "description": "A luxurious fragrance blending Italian elegance with warm leather and refined woody notes",
+        "price": 50.00,
+        "image": "images/Perfume5.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Daisy",
+        "description": "A playful and fresh fragrance with a vibrant blend of wild strawberry, violet, and jasmine, creating a light, youthful, and feminine scent",
+        "price": 55.00,
+        "image": "images/Perfume6.jpg"
+    },
+    {
+        "id": 7,
+        "name": "KHAMRAH",
+        "description": "A rich and opulent fragrance that blends warm, spicy notes of saffron and cinnamon with deep, luxurious leather and amber, creating a captivating and exotic scent",
+        "price": 150.00,
+        "image": "images/Perfume7.jpg"
+    },
+    {
+        "id": 8,
+        "name": "MUSAMAM",
+        "description": "A bold and alluring fragrance that combines rich oud and amber with floral and spicy notes, creating a deep, mysterious scent with an exotic allure",
+        "price": 75.00,
+        "image": "images/Perfume8.jpg"
+    },
+    {
+        "id": 9,
+        "name": "SI",
+        "description": "A sophisticated and modern fragrance that blends fruity notes of blackcurrant with floral heart and warm, musky base, creating an elegant and empowering scent",
+        "price": 60.00,
+        "image": "images/Perfume9.jpg"
+    },
+    {
+        "id": 10,
+        "name": "UN JARDIN",
+        "description": "A fresh and enchanting fragrance collection inspired by garden landscapes, blending vibrant citrus, floral, and green notes to evoke a sense of tranquility and nature's beauty",
+        "price": 85.00,
+        "image": "images/Perfume10.jpg"
+    },
+    {
+        "id": 11,
+        "name": "BONPOINT",
+        "description": "A soft and delicate fragrance that combines subtle floral notes with hints of vanilla and musk, creating a sweet, elegant, and comforting scent reminiscent of childhood innocence",
+        "price": 100.00,
+        "image": "images/Perfume11.jpg"
+    },
+    {
+        "id": 12,
+        "name": "AERIN",
+        "description": "A luxurious fragrance line that blends floral, woody, and fruity notes to create sophisticated, timeless scents that evoke elegance and femininity",
+        "price": 70.00,
+        "image": "images/Perfume12.jpg"
+    },
+    {
+        "id": 13,
+        "name": "DUSITA",
+        "description": "A niche fragrance brand known for its exquisite and complex scents, blending rich floral, woody, and oriental notes to create luxurious, poetic fragrances that evoke emotion and memories",
+        "price": 60.00,
+        "image": "images/Perfume13.jpg"
+    },
+    {
+        "id": 14,
+        "name": "OLYMPEA",
+        "description": "A seductive and powerful fragrance that blends fresh marine notes with sweet vanilla, amber, and salty undertones, creating a bold and captivating scent that exudes confidence",
+        "price": 55.00,
+        "image": "images/Perfume14.jpg"
+    },
+    {
+        "id": 15,
+        "name": "YOU",
+        "description": " A romantic and alluring fragrance that combines sweet cherry, floral jasmine, and warm vanilla, creating a sensual and captivating scent perfect for expressing love and passion",
+        "price": 150.00,
+        "image": "images/Perfume15.jpg"
+    },
+    {
+        "id": 16,
+        "name": "VERSACE",
+        "description": "A bold and glamorous fragrance brand known for its rich, sensual scents that blend florals, citrus, and oriental notes, exuding luxury, confidence, and sophistication",
+        "price": 85.00,
+        "image": "images/Perfume16.jpg"
+    },
+    {
+        "id": 17,
+        "name": "BOTTEGA VENETA",
+        "description": "A luxurious fragrance blending Italian elegance with warm leather and refined woody notes",
+        "price": 110.00,
+        "image": "images/Perfume17.jpg"
+    },
+    {
+        "id": 18,
+        "name": "LOEWE",
+        "description": " A fragrance that embodies modern elegance with a harmonious blend of floral and woody notes",
+        "price": 95.00,
+        "image": "images/Perfume18.jpg"
+    },
+    {
+        "id": 19,
+        "name": "COCO MADEMOISELLE",
+        "description": "A timeless and sophisticated fragrance with vibrant citrus, floral, and warm oriental notes",
+        "price": 70.00,
+        "image": "images/Perfume20.jpg"
+    },
+    {
+        "id": 20,
+        "name": "KAY ALI",
+        "description": "A captivating fragrance line blending luxurious, layered scents inspired by Middle Eastern elegance",
+        "price": 60.00,
+        "image": "images/Perfume19.jpg"
+    },
+    {
+        "id": 21,
+        "name": "JOOP!",
+        "description": "A bold and captivating fragrance with a rich blend of oriental, floral, and spicy notes, exuding confidence and warmth",
+        "price": 90.00,
+        "image": "images/Perfume21.jpg"
+    },
+    {
+        "id": 22,
+        "name": "VIRGNs FIRST",
+        "description": "A luxurious and sensual fragrance with a blend of delicate florals and rich, warm notes, evoking elegance and sophistication",
+        "price": 80.00,
+        "image": "images/Perfume22.jpg"
+    },
+    {
+        "id": 23,
+        "name": "CHANEL PARIS",
+        "description": "A timeless and sophisticated fragrance with vibrant citrus, floral, and warm oriental notes",
+        "price": 100.00,
+        "image": "images/Perfume23.jpg"
+    },
+    {
+        "id": 24,
+        "name": "PALOMA",
+        "description": "A woody and earthy fragrance",
+        "price": 95.00,
+        "image": "images/Perfume24.jpg"
+    },
+    {
+        "id": 25,
+        "name": "LOST CHERRY",
+        "description": "A sweet and decadent fragrance that blends the richness of cherry with warm, oriental notes of almond, vanilla, and tonka bean, creating a seductive and irresistible scent",
+        "price": 89.99,
+        "image": "images/Perfume25.jpg"
+    },
+    {
+        "id": 26,
+        "name": "LOEWE 001",
+        "description": "A unisex fragrance that blends warm, sensual notes of vanilla, sandalwood, and musk with a hint of floral freshness, creating a soft, intimate, and elegant scent",
+        "price": 80.00,
+        "image": "images/Perfume26.jpg"
+    },
+    {
+        "id": 27,
+        "name": "CHANEL",
+        "description": "A timeless and sophisticated fragrance with vibrant citrus, floral, and warm oriental notes",
+        "price": 90.00,
+        "image": "images/Perfume27.jpg"
+    },
+    {
+        "id": 28,
+        "name": "GIOMI",
+        "description": "A fresh and sophisticated fragrance that combines vibrant citrus and floral notes with a subtle woody base, offering a light yet enduring scent",
+        "price": 65.00,
+        "image": "images/Perfume28.jpg"
+    }
+]

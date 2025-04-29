@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfume Store</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Georgia', serif;
+            color: #4F4F4F;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Header Styling */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #fff9f2;
+            border-bottom: 3px solid #dd9f53;
+        }
+
+        header img {
+            height: 50px;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            padding: 0;
+            margin: 0;
+        }
+
+        header nav ul li {
+            display: inline;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: #4F4F4F;
+            font-weight: bold;
+        }
+
+
+        /* Cart Page Styling */
+        .cart-page {
+            background-color: #fff9f2;
+            padding: 20px;
+            max-width: 800px;
+            margin: 50px auto;
+            border-radius: 10px;
+        }
+
+        .cart-page h3 {
+            text-align: center;
+            font-size: 20px;
+            color: #dd9f53;
+            margin-bottom: 20px;
+        }
+
+        .cart-page ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .cart-page ul li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #dd9f53;
+            background-color: #f9f9f9;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .cart-page ul li img {
+            width: 50px;
+            height: auto;
+            border-radius: 10px;
+            margin-right: 15px;
+        }
+
+        .cart-page .product-details {
+            flex-grow: 1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .cart-page .total {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .cart-page .total span {
+            color: #dd9f53;
+        }
+
+        .cart-page button {
+            display: block;
+            width: 100%;
+            background-color: #dd9f53;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cart-page button:hover {
+            background-color: #a56c26;
+        }
+
+        .cart-page button.remove-item {
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            width: 120px;
+            height: 40px;
+        }
+
+        .cart-page button.remove-item:hover {
+            background-color: #c63939;
+        }
+
+        /* Checkout Form Styling */
+        .checkout-form {
+            margin-top: 30px;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .checkout-form h3 {
+            text-align: center;
+            color: #dd9f53;
+            margin-bottom: 15px;
+        }
+
+        .checkout-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .checkout-form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .checkout-form button {
+            width: 100%;
+            background-color: #dd9f53;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .checkout-form button:hover {
+            background-color: #a56c26;
+        }
+
+        .show-checkout-button {
+            display: block;
+            width: 100%;
+            background-color: #dd9f53;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .show-checkout-button:hover {
+            background-color: #a56c26;
+        }
+
+        .checkout-form {
+            display: none;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #fffaf4;
+            padding: 10px 20px;
+            text-align: center;
+            border-top: 2px solid #dd9f53;
+        }
+
+        footer p {
+            margin: 0;
+            color: #4F4F4F;
+        }
+
+        footer a {
+            color: #dd9f53;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media only screen and (max-width: 768px) {
+            header nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .featured .swiper-slide {
+                max-width: 150px;
+            }
+
+            .hero-video h1 {
+                font-size: 2rem;
+            }
+
+            .hero-video p {
+                font-size: 1rem;
+            }
+
+            .swiper-wrapper {
+                flex-wrap: nowrap;
+            }
+
+            footer .social-icons img {
+                width: 15px;
+                height: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <a href="index.html"><img src="images/PerfumeLogo.jpg" alt="Perfume Store Logo"></a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Cart Page -->
+    <div class="cart-page">
+        <h3>Cart</h3>
+        <ul id="cart-items">
+            <!-- Cart items will be dynamically added here -->
+        </ul>
+        <div class="total">
+            <p>Total Price: <span id="total-price">$0.00</span></p>
+        </div>
+
+        <!-- Button to Show Checkout Form -->
+        <button class="show-checkout-button" id="show-checkout">Proceed to Checkout</button>
+        <button onclick="window.location.href='products.html'">Back to Products</button>
+
+        <!-- Checkout Form (Initially Hidden) -->
+        <div class="checkout-form" id="checkout-form">
+            <h3>Checkout</h3>
+            <form id="checkout-form">
+                <label for="customer-name">Name:</label>
+                <input type="text" id="customer-name" name="name" placeholder="Enter your name" required>
+
+                <label for="customer-address">Address:</label>
+                <input type="text" id="customer-address" name="address" placeholder="Enter your address" required>
+
+                <label for="customer-phone">Phone:</label>
+                <input type="tel" id="customer-phone" name="phone" placeholder="Enter your phone number" required>
+
+                <label for="payment-method">Payment Method:</label>
+                <select id="payment-method" name="payment-method" required>
+                    <option value="cod">Cash on Delivery</option>
+                    <option value="credit-card">Credit Card</option>
+                </select>
+
+                <div id="credit-card-details" style="display: none; margin-top: 15px;">
+                    <label for="card-number">Card Number:</label>
+                    <input type="text" id="card-number" name="card-number" placeholder="Enter card number">
+
+                    <label for="expiry-date">Expiry Date:</label>
+                    <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY">
+
+                    <label for="cvv">CVV:</label>
+                    <input type="text" id="cvv" name="cvv" placeholder="CVV">
+                </div>
+
+                <button type="submit">Place Order</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Perfume Store.
+            <br>All Rights Reserved.
+        </p>
+    </footer>
+
+
+    <!-- JavaScript code -->
+    <script>
+        $(document).ready(function () {
+            const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+
+            function calculateTotal() {
+                let total = 0;
+                cartItems.forEach(item => total += item.price);
+                $('#total-price').text(`$${total.toFixed(2)}`);
+            }
+
+            cartItems.forEach((item, index) => {
+                $('#cart-items').append(`
+                    <li>
+                        <img src="${item.image}" alt="${item.name}">
+                        <div class="product-details">
+                            <span>${item.name}</span>
+                            <span>$${item.price.toFixed(2)}</span>
+                            <button class="remove-item" data-index="${index}">Delete</button>
+                        </div>
+                    </li>
+                `);
+            });
+
+            calculateTotal();
+
+            $(document).on('click', '.remove-item', function () {
+                const index = $(this).data('index');
+                cartItems.splice(index, 1);
+                localStorage.setItem('cart', JSON.stringify(cartItems));
+                location.reload();
+            });
+
+            $('#show-checkout').click(function () {
+                $('#show-checkout').hide();
+                $('#checkout-form').show();
+            });
+
+            $('#payment-method').on('change', function () {
+                if ($(this).val() === 'credit-card') {
+                    $('#credit-card-details').show();
+                } else {
+                    $('#credit-card-details').hide();
+                }
+            });
+
+            $('#checkout-form').on('submit', function (e) {
+                e.preventDefault();
+
+                const name = $('#customer-name').val();
+                const address = $('#customer-address').val();
+                const phone = $('#customer-phone').val();
+                const paymentMethod = $('#payment-method').val();
+
+                if (paymentMethod === 'credit-card') {
+                    const cardNumber = $('#card-number').val();
+                    const expiryDate = $('#expiry-date').val();
+                    const cvv = $('#cvv').val();
+
+                    if (!cardNumber || !expiryDate || !cvv) {
+                        alert('Please fill in all credit card details.');
+                        return;
+                    }
+                }
+
+                alert(`Thank you, ${name}! Your order has been placed using ${paymentMethod === 'cod' ? 'Cash on Delivery' : 'Credit Card'}.`);
+                localStorage.removeItem('cart');
+                window.location.href = 'index.html';
+            });
+        });
+    </script>
+</body>
+
+</html>
